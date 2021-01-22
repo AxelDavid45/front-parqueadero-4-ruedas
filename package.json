@@ -1,0 +1,23 @@
+{
+  "name": "parqueadero-4-gradi-frontend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AxelDavid45/front-parqueadero-4-ruedas.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AxelDavid45/front-parqueadero-4-ruedas/issues"
+  },
+  "homepage": "https://github.com/AxelDavid45/front-parqueadero-4-ruedas#readme",
+  "devDependencies": {
+    "standard": "^16.0.3"
+  }
+}
