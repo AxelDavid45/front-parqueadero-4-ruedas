@@ -10,7 +10,7 @@ export const cardOwner = (data) => {
           <ul>
               <li><b>Nombre:</b>${data.nombre}</li>
               <li><b>-----Vehiculos-----</b></li>
-              ${data.forEach(vehicle => {
+              ${data.vehiculos.map(vehicle => {
                 return `
                   <li>
                   ---
@@ -19,9 +19,8 @@ export const cardOwner = (data) => {
                         <li><b>Marca:</b>${vehicle.marca}</li>
                         <li><b>Tipo:</b>${vehicle.tipo}</li>
                     </ul>
-                  ---
-                  </li>`
-              })}
+                  </li>
+              `})}
           </ul>
       </div>
     </div>

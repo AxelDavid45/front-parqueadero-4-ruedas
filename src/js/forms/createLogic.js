@@ -25,6 +25,5 @@ export async function createLogic (resultsPanel) {
     if (response.status === 409) {
       resultsPanel.innerHTML = showAlert('danger', responseBody.message)
     }
-    setTimeout(() => { resultsPanel.innerHTML = ''}, 1000)
   }
 }
