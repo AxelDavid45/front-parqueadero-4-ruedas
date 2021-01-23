@@ -1,6 +1,7 @@
 import { routes } from './utils/routes.js'
 import { createLogic } from './forms/createLogic.js'
 import { searchLogic } from './forms/searchLogic.js'
+import { countBrands } from './forms/countBrands.js'
 
 const menu = document.getElementById('menu')
 const forms = document.getElementById('forms')
@@ -32,6 +33,10 @@ menu.addEventListener('click', function (evt) {
 
       if (name === 'SearchByIdentity') {
         await searchLogic(resultsApi, 'identity')
+      }
+
+      if (name === 'SearchByBrand') {
+        await countBrands(resultsApi)
       }
 
 
