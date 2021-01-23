@@ -1,6 +1,6 @@
 export const searchIdentityForm = () => {
   return `
-    <form action="#" id="search-identity-form">
+    <form action="#" id="form-user" data-name="SearchByIdentity">
         <div class="field">
             <label class="label">Cedula</label>
             <div class="control">

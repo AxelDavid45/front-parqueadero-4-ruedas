@@ -1,6 +1,6 @@
 export const searchNameForm = () => {
   return `
-    <form action="#" id="search-name-form">
+    <form action="#" id="form-user" data-name="SearchByName">
         <div class="field">
             <label class="label">Nombre del propietario</label>
             <div class="control">

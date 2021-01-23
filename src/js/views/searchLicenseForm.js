@@ -1,6 +1,6 @@
 export const searchLicenseForm = () => {
   return `
-    <form action="#" id="search-license-form">
+    <form action="#" id="form-user" data-name="SearchByLicense">
         <div class="field">
             <label class="label">Placas</label>
             <div class="control">

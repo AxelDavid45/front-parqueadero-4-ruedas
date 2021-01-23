@@ -10,7 +10,7 @@ export const cardOwner = (data) => {
           <ul>
               <li><b>Nombre:</b>${data.nombre}</li>
               <li><b>-----Vehiculos-----</b></li>
-              ${data.forEach((vehicle) => {
+              ${data.forEach(vehicle => {
                 return `
                   <li>
                   ---
