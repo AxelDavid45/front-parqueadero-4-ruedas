@@ -1,4 +1,4 @@
-const API = 'http://parqueadero-4-gradi.me/api'
+const API = 'https://backend-4wheels-laravel.herokuapp.com/api'
 export const sendRequest = async (url, data, type) => {
   try {
     const options = {
