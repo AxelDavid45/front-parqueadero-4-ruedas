@@ -4,7 +4,7 @@ export const searchNameForm = () => {
         <div class="field">
             <label class="label">Nombre del propietario</label>
             <div class="control">
-                <input class="input" type="text" placeholder="Nombre" id="name" required>
+                <input class="input" type="text" placeholder="Nombre" id="filter" required>
             </div>
         </div>
         <div class="field">

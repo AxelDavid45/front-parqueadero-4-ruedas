@@ -11,7 +11,6 @@ menu.addEventListener('click', function (evt) {
   const form = routes(evt.target.id)
   handleColorTabsMenu(evt)
   forms.innerHTML = form
-  resultsApi.innerHTML = ''
 
   formUser = document.getElementById('form-user')
 
@@ -24,8 +23,18 @@ menu.addEventListener('click', function (evt) {
       }
 
       if (name === 'SearchByName') {
-        await searchLogic(resultsApi)
+        await searchLogic(resultsApi, 'name')
       }
+
+      if (name === 'SearchByLicense') {
+        await searchLogic(resultsApi, 'license')
+      }
+
+      if (name === 'SearchByIdentity') {
+        await searchLogic(resultsApi, 'identity')
+      }
+
+
       return false
     })
   }

@@ -4,7 +4,7 @@ export const searchLicenseForm = () => {
         <div class="field">
             <label class="label">Placas</label>
             <div class="control">
-                <input class="input" type="text" placeholder="Placas">
+                <input class="input" type="text" placeholder="Placas" id="filter">
             </div>
         </div>
         <div class="field">

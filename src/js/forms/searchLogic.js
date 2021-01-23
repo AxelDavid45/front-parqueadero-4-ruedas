@@ -1,21 +1,28 @@
 import { sendRequest } from '../utils/sendRequest.js'
 import { cardOwner } from '../views/results/cardOwner.js'
 import { showAlert } from '../utils/alert.js'
+import { cardVehicle } from '../views/results/cardVehicle.js'
 
-export async function searchLogic (resultsPanel) {
-  const name = document.getElementById('name').value
-  if (name !== '') {
-    console.log(name)
-    const response = await sendRequest(`/vehicle/owner/${name}`, null, 'get')
-    const responseBody = await response.json()
+const URLS = {'license': '/vehicle', 'name': '/vehicle/owner', 'identity': '/vehicle/owner/identity'}
 
-    console.log(responseBody.data)
-    if (response.status === 200) {
-      resultsPanel.innerHTML = cardOwner(responseBody.data)
-    }
+export async function searchLogic (resultsPanel, urlName) {
+  const filter = document.getElementById('filter').value
+  if (filter !== '') {
+    if (URLS[urlName]) {
+      const response = await sendRequest(`${URLS[urlName]}/${filter}`, null, 'get')
+      const responseBody = await response.json()
 
-    if (response.status === 500) {
-      resultsPanel.innerHTML = showAlert('danger', responseBody.error)
+      if (response.status === 200) {
+        if (urlName === 'identity' || urlName === 'name') {
+          resultsPanel.innerHTML = cardOwner(responseBody.data)
+        } else {
+          resultsPanel.innerHTML = cardVehicle(responseBody.data)
+        }
+      }
+
+      if (response.status === 500) {
+        resultsPanel.innerHTML = showAlert('danger', responseBody.error)
+      }
     }
   }
   return false

@@ -4,7 +4,7 @@ export const searchIdentityForm = () => {
         <div class="field">
             <label class="label">Cedula</label>
             <div class="control">
-                <input class="input" type="text" placeholder="Cedula">
+                <input class="input" type="text" placeholder="Cedula" id="filter" required>
             </div>
         </div>
         <div class="field">
