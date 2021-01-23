@@ -4,9 +4,9 @@ import { showAlert } from '../utils/alert.js'
 import { cardVehicle } from '../views/results/cardVehicle.js'
 
 const URLS = {
-  'license': '/vehicle',
-  'name': '/vehicle/owner',
-  'identity': '/vehicle/owner/identity'
+  license: '/vehicle',
+  name: '/vehicle/owner',
+  identity: '/vehicle/owner/identity'
 }
 
 export async function searchLogic (resultsPanel, urlName) {

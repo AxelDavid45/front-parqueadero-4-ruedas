@@ -20,7 +20,8 @@ export const cardOwner = (data) => {
                         <li><b>Tipo:</b>${vehicle.tipo}</li>
                     </ul>
                   </li>
-              `})}
+              `
+})}
           </ul>
       </div>
     </div>

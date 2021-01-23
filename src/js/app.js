@@ -39,7 +39,6 @@ menu.addEventListener('click', function (evt) {
         await countBrands(resultsApi)
       }
 
-
       return false
     })
   }

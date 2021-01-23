@@ -3,7 +3,7 @@ import { cardBrands } from '../views/results/cardBrands.js'
 import { showAlert } from '../utils/alert.js'
 
 export async function countBrands (resultsPanel) {
-  const response =  await sendRequest('/vehicle/brand', null, 'get')
+  const response = await sendRequest('/vehicle/brand', null, 'get')
   const responseBody = await response.json()
 
   if (response.status === 200) {
